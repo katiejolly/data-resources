@@ -6,9 +6,19 @@ If you know of a good resource that you want to share, feel free to submit a pul
 
 This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJNaDIInpn7RCuigNL5NeBVkTFJxFtj8CkTW2g/edit?usp=sharing) of resources. I'm slowly working on coverting that file! 
 
-## Topics
+## News
 
-* GIS
+* [GovTech](http://www.govtech.com/) - articles about technology in government
+
+* [Fivethirtyeight](http://fivethirtyeight.com/)
+
+* [Upshot](https://www.nytimes.com/section/upshot) - NYT's data analysis 
+
+## GIS and online mapping
+
+* [Tableau public](https://public.tableau.com/s/)
+
+---
 
 * R
 
