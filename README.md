@@ -44,15 +44,35 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 ### Links
 
+* [awesome-R](https://github.com/qinwf/awesome-R) - github repo with SO MANY good R resources! Mostly packages, some other things at the end. 
+* [RStudio online learning](https://www.rstudio.com/online-learning/)
+
 #### Mentorship
 
 * [Data helpers](https://www.datahelpers.org/) - A site by Angela Bassa with a list of people willing to help/mentor!
 
 #### Podcasts
 
+* [Dataframed](https://www.datacamp.com/community/podcast) - datacamp's podcast
+* [Not so standard deviations](http://nssdeviations.com/)
+* [Data skeptic](https://dataskeptic.com/)
+* [Partially derivative](http://partiallyderivative.com/)
+* [Linear digressions](http://lineardigressions.com/)
+
+
 #### Interviews
 
+* [.Rprofile Mara Averick](https://ropensci.org/blog/2017/11/10/rprofile-mara-averick/)
+* [.Rprofile Karthik Ram](https://ropensci.org/blog/2018/01/12/rprofile-karthik-ram/)
+* [.Rprofile Jenny Bryan](https://ropensci.org/blog/2017/12/08/rprofile-jenny-bryan/)
+
 #### Packages to know/learn
+
+* [ROpenSci packages](https://ropensci.org/packages/)
+* [Emo: emojis in R](https://github.com/hadley/emo) because why not? 
+* [Tidyverse packages](https://www.tidyverse.org/)
+* [Broom](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)- tidy model output
+* [Markovify](https://github.com/abresler/markovifyR)- use this for future Markov chain poems! Re: Malcolm's [tweet](https://twitter.com/malco_bearhat/status/956593858573316096)
 
 #### Blogs
 
