@@ -30,6 +30,14 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Raw graphs](http://rawgraphs.io/)
 * [Timeline](https://timeline.knightlab.com/)
 
+### General data viz books, etc. 
+
+* [Data points: visualization that means something](http://flowingdata.com/data-points/) by Nathan Yau
+* [Visualize this](http://book.flowingdata.com/) by Nathan Yau
+* Anything by Edward Tufte
+* [Designer's guide to creating charts and diagrams](https://www.amazon.com/Designers-Guide-Creating-Charts-Diagrams/dp/0823013383) by Nigel Holmes
+* [Cool infographics](https://www.amazon.com/Cool-Infographics-Effective-Communication-Visualization/dp/1118582306) by Randy Krum
+
 ---
 
 * R
