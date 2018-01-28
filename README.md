@@ -233,6 +233,25 @@ gs_url() # register a sheet by url
 
 ### Conditionals
 
+### ggplot2
+
+[ggplot2 gallery](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html) 
+
+How to change the order of the bars in `geom_bar()` !!!!
+
+```{r}
+# from https://stackoverflow.com/questions/5208679/order-bars-in-ggplot2-bar-graph
+
+require(forcats)
+
+ggplot(data, aes(x = fct_infreq(var))) + geom_bar()
+
+# from https://rstudio-pubs-static.s3.amazonaws.com/7433_4537ea5073dc4162950abb715f513469.html
+
+x$name <- factor(x$name, levels = x$name[order(x$val)])
+ggplot(x, aes(x = name, y = val)) + theme_bw() + geom_bar(stat = "identity")
+```
+
 ---
 
 * Python
