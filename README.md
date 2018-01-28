@@ -46,7 +46,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 #### Mentorship
 
-* [Data helpers] - A site by Angela Bassa with a list of people willing to help/mentor!
+* [Data helpers](https://www.datahelpers.org/) - A site by Angela Bassa with a list of people willing to help/mentor!
 
 #### Podcasts
 
@@ -94,7 +94,42 @@ my_workbook <- lapply(excel_sheets("data.xlsx"),
   path = "data.xlsx")
 ```
 
-### Googlesheets package
+[XLConnect](https://www.rdocumentation.org/packages/XLConnect/versions/0.2-13) - dynamic connection between R and excel. 
+
+```{r}
+createSheet(book, “name”)
+loadWorkbook(“path”)
+getSheets(book)
+writeWorksheet () # function (object, data, sheet, startRow = 1, startCol = 1, header = TRUE, 
+    rownames = NULL) 
+writeWorkbook(object, “path”)
+renameSheet() # function (object, sheet, newName) 
+removeSheet() # function (object, sheet) 
+```
+
+
+### Googlesheets package <3
+
+[googlesheets](https://github.com/jennybc/googlesheets)
+
+There's a [vignette](https://rawgit.com/jennybc/googlesheets/master/vignettes/basic-usage.html) with lots of good info. 
+
+```{r}
+# uses oauth to access drive
+
+gs_auth() # run to authorize
+```
+
+From the github site, an overview of the functions:
+
+```{r}
+gs_ls() # list sheets
+gs_title() # register a sheet by title
+gs_key() # register a sheet by key
+gs_url() # register a sheet by url
+
+... tbd 
+```
 
 ### Dates and times
 
