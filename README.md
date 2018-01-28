@@ -76,6 +76,8 @@ download.file(url, dest_path) # makes downloading files reproducible
 
 ROpenSci has an awesome package to use tabula in R-- [tabulizer](https://github.com/ropensci/tabulizer)
 
+[Tabula](http://tabula.technology/) is also awesome on its own. 
+
 ```{r}
 # example code from github
 
