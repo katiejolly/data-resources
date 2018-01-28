@@ -37,10 +37,72 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * Anything by Edward Tufte
 * [Designer's guide to creating charts and diagrams](https://www.amazon.com/Designers-Guide-Creating-Charts-Diagrams/dp/0823013383) by Nigel Holmes
 * [Cool infographics](https://www.amazon.com/Cool-Infographics-Effective-Communication-Visualization/dp/1118582306) by Randy Krum
+* [TED talk: The beauty of data visualization](https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization?language=en) by David McCandless
+* [The functional art](http://www.thefunctionalart.com/p/about-book.html) by Alberto Cairo
+
+## R
+
+### Links
+
+#### Mentorship
+
+* [Data helpers] - A site by Angela Bassa with a list of people willing to help/mentor!
+
+#### Podcasts
+
+#### Interviews
+
+#### Packages to know/learn
+
+#### Blogs
+
+#### Books
+
+#### Style guides
+
+### General
+
+### Helpful file functions
+
+```{r}
+file.path() # takes folder names and returns a path to your file
+
+file.choose() # pulls up finder so you can point to your file
+
+download.file(url, dest_path) # makes downloading files reproducible
+```
+
+### Excel in R
+
+[Using the xlsx package to create an excel file](https://www.r-bloggers.com/using-the-xlsx-package-to-create-an-excel-file/)
+
+[readxl package](http://readxl.tidyverse.org/) - tidyverse w/ excel
+
+```{r}
+excel_sheets() # gives a character vector of the sheet names
+
+read_excel() # reads in excel files
+# args: sheets (defines which sheet you want)
+        col_names = TRUE
+        col_types ("blank" to skip a column)
+        skip (n rows to skip)
+
+# put all sheets in a list to keep them together
+
+my_workbook <- lapply(excel_sheets("data.xlsx"),
+  read_excel,
+  path = "data.xlsx")
+```
+
+### Googlesheets package
+
+### Dates and times
+
+### Dataframes/tables
+
+### Conditionals
 
 ---
-
-* R
 
 * Python
 
