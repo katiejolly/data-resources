@@ -72,6 +72,80 @@ file.choose() # pulls up finder so you can point to your file
 download.file(url, dest_path) # makes downloading files reproducible
 ```
 
+#### Extracting data from PDFs
+
+ROpenSci has an awesome package to use tabula in R-- [tabulizer](https://github.com/ropensci/tabulizer)
+
+```{r}
+# example code from github
+
+library("tabulizer")
+f <- system.file("examples", "data.pdf", package = "tabulizer")
+out1 <- extract_tables(f)
+
+out2 <- extract_tables(f, pages = 1, guess = FALSE, method = "data.frame")
+
+extract_areas() # turns the pdf into an R graphic so you can select the tables on a page, if the whole page isn't a table! 
+
+out3 <- extract_text(f, page = 3) # gets just the text from the table, without turning it into a dataframe
+cat(out3, sep = "\n")
+## len supp dose
+## 4.2 VC 0.5
+## 11.5 VC 0.5
+## 7.3 VC 0.5
+## 5.8 VC 0.5
+## 6.4 VC 0.5
+## 10.0 VC 0.5
+## 11.2 VC 0.5
+## 11.2 VC 0.5
+## 5.2 VC 0.5
+## 7.0 VC 0.5
+## 16.5 VC 1.0
+## 16.5 VC 1.0
+## 15.2 VC 1.0
+## 17.3 VC 1.0
+## 22.5 VC 1.0
+## 3
+```
+
+How to install tabulizer:
+
+(On Windows) 
+
+From github vignette:
+
+In command prompt, install Chocolately if you don't already have it:
+
+```
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+```
+
+Then install java! 
+
+```
+choco install jdk7 -y
+```
+
+To set an environment variable in R use
+
+```
+Sys.setenv(JAVA_HOME = "C:/Program Files/Java/jdk1.8.0_92")
+```
+
+if that doesn't work, look at the other options in the vignette. 
+
+Then install the dev version of the package (not yet on CRAN) 
+
+```{r}
+if (!require("ghit")) {
+    install.packages("ghit")
+}
+# on 64-bit Windows
+ghit::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"), INSTALL_opts = "--no-multiarch")
+# elsewhere
+ghit::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"))
+```
+
 ### Excel in R
 
 [Using the xlsx package to create an excel file](https://www.r-bloggers.com/using-the-xlsx-package-to-create-an-excel-file/)
