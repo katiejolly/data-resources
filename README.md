@@ -8,7 +8,8 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 # Contents 
 
-* [News](##News)
+* [News](#news)
+* [GIS and online mapping](#gis-and-online-mapping)
 
 ## News
 
