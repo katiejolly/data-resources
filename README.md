@@ -48,7 +48,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [TED talk: The beauty of data visualization](https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization?language=en) by David McCandless
 * [The functional art](http://www.thefunctionalart.com/p/about-book.html) by Alberto Cairo
 
-## R
+## Rstats
 
 ### Links
 
@@ -84,11 +84,46 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 #### Blogs
 
+* [ROpenSci](https://ropensci.org/blog/)
+* [RWeekly](https://rweekly.org/)
+* [Variance explained](http://varianceexplained.org)
+* [Datacamp blog](https://www.datacamp.com/community/blog)
+* [Datacamp tech](https://www.datacamp.com/community/tech)
+* [RStudio](https://blog.rstudio.com/)
+* [Mara Averick](https://maraaverick.rbind.io/)
+* [Simply statistics](https://simplystatistics.org/)
+* [Andrew Gelman](http://andrewgelman.com/)
+* [Civil stat](http://civilstat.com/)
+* [Citizen statistician](http://citizen-statistician.org/)
+* [Maelle Salmon](http://www.masalmon.eu/)
+* [Live free or dichotomize](http://livefreeordichotomize.com/)
+* [Caitlin Hudon](https://caitlinhudon.com/)
+
 #### Books
+
+* [R for data science](http://r4ds.had.co.nz/) by Hadley Wickham
+* [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
+* [Happy Git with R](http://happygitwithr.com/) by Jenny Bryan and the STAT 545 TAs
+* [Stat 545](http://stat545.com/) - not quite a book, but same idea by Jenny Bryan
+* [R Packages](http://r-pkgs.had.co.nz/intro.html) by Hadley Wickham
+* [Graphics Cookbook for R](http://www.cookbook-r.com/) by Winston Chang
+* [Data visualization: a practical introduction](http://socviz.co/) by Kieran Healy
+* [R programming for data science](https://leanpub.com/rprogramming) by Roger Peng
+* [Exploratory data analysis with R](https://leanpub.com/exdata) by Roger Peng
+* [An intro to statistical and data sciences via R](http://moderndive.com/) by Chester Ismay and Albert Y. Kim
+* [Tidy text mining](https://www.tidytextmining.com/) by Julia Silge and David Robinson
+* [Intro to empirical Bayes](https://gumroad.com/l/empirical-bayes) by David Robinson
+* [Curated list of R books](https://github.com/RomanTsegelskyi/rbooks)
+* [Computational linear algebra course](http://www.fast.ai/2017/07/17/num-lin-alg/)
 
 #### Style guides
 
-### General
+* [Tidyverse style guide](http://style.tidyverse.org/)
+* [Specifically: tidyverse error style guide](http://style.tidyverse.org/error-messages.html)
+* [Google R style guide](https://google.github.io/styleguide/Rguide.xml)
+* [R style guide](https://github.com/rdatsci/PackagesInfo/wiki/R-Style-Guide)
+* [Data sharing style guide](https://github.com/vkoul/datasharing)
+* [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
 
 ### Helpful file functions
 
@@ -363,6 +398,8 @@ bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County
 ```
 
 `dplyr::filter` doesn't work with spatial data!! 
+
+
 ---
 
 * Python
