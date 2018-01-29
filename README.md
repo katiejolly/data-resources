@@ -115,6 +115,8 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Intro to empirical Bayes](https://gumroad.com/l/empirical-bayes) by David Robinson
 * [Curated list of R books](https://github.com/RomanTsegelskyi/rbooks)
 * [Computational linear algebra course](http://www.fast.ai/2017/07/17/num-lin-alg/)
+* [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
+
 
 #### Style guides
 
@@ -123,7 +125,6 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Google R style guide](https://google.github.io/styleguide/Rguide.xml)
 * [R style guide](https://github.com/rdatsci/PackagesInfo/wiki/R-Style-Guide)
 * [Data sharing style guide](https://github.com/vkoul/datasharing)
-* [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
 
 ### Helpful file functions
 
@@ -398,6 +399,32 @@ bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County
 ```
 
 `dplyr::filter` doesn't work with spatial data!! 
+
+## Data
+
+### Gov open data
+
+* [US gov data](https://www.data.gov/)
+* [Charlottesville open data](http://opendata.charlottesville.org/)
+* [Open data DC](http://opendata.dc.gov/)
+* [Open data Minneapolis](http://opendata.minneapolismn.gov/)
+* [Open data St Paul](https://information.stpaul.gov/)
+* [MN geospatial commons](https://gisdata.mn.gov/)
+* [Met Council (Twin Cities)](https://metrocouncil.org/Data-and-Maps/Data.aspx)
+* [Boston Open Data](https://data.boston.gov/)
+
+### Popular press data 
+
+* [Fivethirthyeight](https://github.com/fivethirtyeight/data/tree/master/biopics)
+* [Buzzfeed](https://github.com/BuzzFeedNews)
+* [Seth Stephens-Davidowitz: google trends data](http://sethsd.com/research/)
+
+## Civic tech projects (open source contributing! yay!)
+
+* [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding. 
+* [Mapping prejudice](https://www.mappingprejudice.org/get-involved/)- digitizing and mapping racial covenants in MPLS home deeds. No coding required!
+
+
 
 
 ---
