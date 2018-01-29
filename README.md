@@ -54,6 +54,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Data journalism awards](https://www.datajournalismawards.org/)
 * [7 types of people who are out of work, categorized with data](https://www.vox.com/policy-and-politics/2017/7/3/15893996/7-types-people-out-of-work)
 * [Smart Cities DIVE](https://www.smartcitiesdive.com/)
+* [Pudding](https://pudding.cool/)
 
 
 ## GIS and online mapping
@@ -625,6 +626,10 @@ df <- df[!(is.na(df$var) | df$var==""), ]
 David Robinson's `broom` package gives model output in a "tidy" format. 
 
 ## Data
+
+### General Repositories:
+* [Kaggle Datasets](https://www.kaggle.com/datasets)
+* [data.world](https://data.world/)
 
 ### Gov open data
 
