@@ -53,6 +53,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [The Guardian datablog](https://www.theguardian.com/data)
 * [Data journalism awards](https://www.datajournalismawards.org/)
 * [7 types of people who are out of work, categorized with data](https://www.vox.com/policy-and-politics/2017/7/3/15893996/7-types-people-out-of-work)
+* [Smart Cities DIVE](https://www.smartcitiesdive.com/)
 
 
 ## GIS and online mapping
