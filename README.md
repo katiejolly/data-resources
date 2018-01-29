@@ -24,6 +24,19 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
      * Extracting data from PDFs
     * [Excel in R](#excel-in-r)
     * [Googlesheets](#googlesheets-package-3)
+    * [Dates and times](#dates-and-times)
+    * [Dataframes/tables](#dataframestables)
+    * [Conditionals](#conditionals)
+    * [ggplot2](#ggplot2)
+    * [GIS in R](#gis-in-r)
+    * [Cleaning data](#cleaning-data)
+    * [Modeling in R](#modeling-in-r)
+* [Data](#data)
+    * [Gov open data](#gov-open-data)
+    * [Popular press data](#popular-press-data)
+    * [Curated lists](#curated-lists)
+* [Civic tech projects](#civic-tech-projects-open-source-contributing-yay)
+* [General tips + tricks](#general-tips--tricks)
 
 ## News
 
