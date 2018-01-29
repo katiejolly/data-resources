@@ -19,6 +19,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [NPR Political data and technology](https://www.npr.org/sections/political-data-technology)
 * [LA Times data desk](http://www.latimes.com/local/datadesk/#nt=taxonomy-article)
 * [The Guardian datablog](https://www.theguardian.com/data)
+* [Data journalism awards](https://www.datajournalismawards.org/)
 
 
 ## GIS and online mapping
@@ -66,6 +67,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Data skeptic](https://dataskeptic.com/)
 * [Partially derivative](http://partiallyderivative.com/)
 * [Linear digressions](http://lineardigressions.com/)
+* [Data Stories](http://datastori.es/)
 
 
 #### Interviews
@@ -273,6 +275,86 @@ gs_url() # register a sheet by url
 
 ### Dates and times
 
+`strptime` to convert character strings to POSIXct.
+
+```{r}
+strptime(x, format, tz = "")
+```
+Formatting POSIXct objects:
+
+* %Y: 4-digit year (1982)
+* %y: 2-digit year (82)
+* %m: 2-digit month (01)
+* %d: 2-digit day of the month (13)
+* %A: weekday (Wednesday)
+* %a: abbreviated weekday (Wed)
+* %B: month (January)
+* %b: abbreviated month (Jan)
+* %H: hours as a decimal number (00-23)
+* %I: hours as a decimal number (01-12)
+* %M: minutes as a decimal number
+* %S: seconds as a decimal number
+* %T: shorthand notation for the typical format %H:%M:%S
+* %p: AM/PM indicator
+
+Example use: 
+
+```{r}
+# from r documentation
+x <- c("1jan1960", "2jan1960", "31mar1960", "30jul1960")
+z <- strptime(x, "%d%b%Y")
+```
+
+Also use `lubridate` for working with date objects!
+
+There's helpful info on the [tidyverse site](http://lubridate.tidyverse.org/) as well as a nice [vignette](https://cran.r-project.org/web/packages/lubridate/lubridate.pdf)
+
+Lubridate makes it easy to manipulate and work with dates. 
+
+It has some of the same capacity as `strptime`, although I actually prefer the former.
+
+```{r}
+ymd(20101215)
+#> [1] "2010-12-15"
+mdy("4/1/17")
+#> [1] "2017-04-01"
+```
+Lubridate also makes timezones less confusing!
+
+```{r}
+time <- ymd_hms("2010-12-13 15:30:30")
+time
+#> [1] "2010-12-13 15:30:30 UTC"
+
+# Changes printing
+with_tz(time, "America/Chicago")
+#> [1] "2010-12-13 09:30:30 CST"
+
+# Changes time
+force_tz(time, "America/Chicago")
+#> [1] "2010-12-13 15:30:30 CST"
+```
+
+You can also pull out specific parts of a date object.
+
+```{r}
+bday <- dmy("14/10/1979")
+month(bday)
+#> [1] 10
+wday(bday, label = TRUE)
+#> [1] Sun
+#> Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
+```
+
+Say you want to turn a time into a numerical representation (i.e. 8:30 AM would be 8.50). Use lubridate!
+
+```{r}
+time <- hm("8:30")
+
+hour(time) + minute(time)/60
+#> 8.5
+```
+
 ### Dataframes/tables
 
 ### Conditionals
@@ -392,7 +474,7 @@ You can join the two with `tigris::geo_join`. Regular joins don't work with spat
 bos_joined <- geo_join(bos_tract, bos_inc, by = "GEOID")
 ```
 
-And if I want to exclude a particular tract (it's mostly water, NA for all demographics) and makes my maps looks ugly :(
+And if I want to exclude a particular tract (it's mostly water, NA for all demographics) that makes my maps looks ugly :(
 
 ```{r}
 bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County, Massachusetts")
@@ -424,7 +506,12 @@ bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County
 * [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding. 
 * [Mapping prejudice](https://www.mappingprejudice.org/get-involved/)- digitizing and mapping racial covenants in MPLS home deeds. No coding required!
 
+## General tips + tricks
 
+* [Guidelines for telling a great data science story](http://101.datascience.community/2017/06/09/guidelines-for-telling-a-great-data-science-story/)
+* [Beginner mistakes](https://elitedatascience.com/beginner-mistakes)
+* [How to call bullshit on big data: a practical guide](http://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide)
+* [The blissful ignorance of the narrative fallacy](https://multithreaded.stitchfix.com/blog/2017/06/07/hot-hand-and-narrative-fallacy/)
 
 
 ---
@@ -433,12 +520,10 @@ bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County
 
 * HTML/CSS
 
-* Data sources
-
 * Regex
 
 * SQL
 
 * Jekyll + blogging
 
-* General tips + tricks
+
