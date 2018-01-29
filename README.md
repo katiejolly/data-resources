@@ -478,6 +478,23 @@ geoCode <- function(address,verbose=FALSE) {
 
 I'm sure there's a cleaner way to do this, I'll work on using opencage and then updating this page!
 
+Another method of geocoding is using ggmap package and Google API. First, register for a key [here](https://developers.google.com/maps/documentation/geocoding/get-api-key). After you get the key, this script will geocode for you (up to the API limit which is around 2500/day)
+
+```{r}
+library(ggmap)
+register_google(key = "my_key")
+
+for(i in 1:nrow(turnout_data)){
+  #location is a string like "123 University Ave, Gainesville FL"
+  #This works best if you format your locations the same way you would for Google Maps/Waze/Tom Tom
+  result <- geocode(my_data_frame$location[i], output = "latlona", source = "google")
+  my_data_frame$lon[i] <- as.numeric(result[1])
+  my_data_frame$lat[i] <- as.numeric(result[2])
+  turnout_data$geoAddress[i] <- as.character(result[3])
+}
+
+```
+
 
 #### Census data! I love census data!
 
