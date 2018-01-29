@@ -123,7 +123,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 * [ROpenSci](https://ropensci.org/blog/)
 * [RWeekly](https://rweekly.org/)
-* [Variance explained](http://varianceexplained.org)
+* [David Robinson](http://varianceexplained.org)
 * [Datacamp blog](https://www.datacamp.com/community/blog)
 * [Datacamp tech](https://www.datacamp.com/community/tech)
 * [RStudio](https://blog.rstudio.com/)
@@ -135,6 +135,8 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Maelle Salmon](http://www.masalmon.eu/)
 * [Live free or dichotomize](http://livefreeordichotomize.com/)
 * [Caitlin Hudon](https://caitlinhudon.com/)
+* [Julia Silge](https://juliasilge.com/blog/)
+* [Thomas Lin Pedersen](https://www.data-imaginist.com/)
 
 #### Books
 
