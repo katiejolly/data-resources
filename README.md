@@ -664,7 +664,7 @@ David Robinson's `broom` package gives model output in a "tidy" format.
 * [Beginner mistakes](https://elitedatascience.com/beginner-mistakes)
 * [How to call bullshit on big data: a practical guide](http://www.newyorker.com/tech/elements/how-to-call-bullshit-on-big-data-a-practical-guide)
 * [The blissful ignorance of the narrative fallacy](https://multithreaded.stitchfix.com/blog/2017/06/07/hot-hand-and-narrative-fallacy/)
-
+* [Emoji cheat sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
 ---
 
