@@ -586,6 +586,9 @@ Answer found in a [SO question](https://stackoverflow.com/questions/9126840/dele
 df <- df[!(is.na(df$var) | df$var==""), ]
 ```
 
+### Modeling in R
+
+David Robinson's `broom` package gives model output in a "tidy" format. 
 
 ## Data
 
@@ -599,12 +602,22 @@ df <- df[!(is.na(df$var) | df$var==""), ]
 * [MN geospatial commons](https://gisdata.mn.gov/)
 * [Met Council (Twin Cities)](https://metrocouncil.org/Data-and-Maps/Data.aspx)
 * [Boston Open Data](https://data.boston.gov/)
+* [World Bank databank](http://databank.worldbank.org/data/home.aspx)
 
 ### Popular press data 
 
 * [Fivethirthyeight](https://github.com/fivethirtyeight/data/tree/master/biopics)
 * [Buzzfeed](https://github.com/BuzzFeedNews)
 * [Seth Stephens-Davidowitz: google trends data](http://sethsd.com/research/)
+* [ProPublica datasets](https://www.propublica.org/datastore/datasets)- only some are free
+
+### Curated lists
+
+* [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
+* [Sunlight labs- before they closed](https://github.com/sunlightlabs)
+* [Public APIs](https://github.com/toddmotto/public-apis)
+* [The Guardian: global development data](https://www.theguardian.com/global-development-professionals-network/2016/mar/16/the-top-10-sources-of-data-for-international-development-research)
+
 
 ## Civic tech projects (open source contributing! yay!)
 
