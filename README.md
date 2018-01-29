@@ -155,6 +155,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Curated list of R books](https://github.com/RomanTsegelskyi/rbooks)
 * [Computational linear algebra course](http://www.fast.ai/2017/07/17/num-lin-alg/)
 * [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
+* [Geocomputation with R](https://geocompr.robinlovelace.net/)
 
 
 #### Style guides
