@@ -12,16 +12,16 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [GIS and online mapping](#gis-and-online-mapping)
 * [Data visualization- point and click](#data-visualization-mostly-point-and-click)
 * [Rstats](#rstats)
-    * [Links](#links)
-     * Mentorship
-     * Podcasts
-     * Interviews
-     * Packages
-     * Blogs
-     * Books
-     * Style guides
+   * [Links](#links)
+      * Mentorship
+      * Podcasts
+      * Interviews
+      * Packages
+      * Blogs
+      * Books
+      * Style guides
     * [Helpful file functions](#helpful-file-functions) 
-     * Extracting data from PDFs
+      * Extracting data from PDFs
     * [Excel in R](#excel-in-r)
     * [Googlesheets](#googlesheets-package-3)
     * [Dates and times](#dates-and-times)
