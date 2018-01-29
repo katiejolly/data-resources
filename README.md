@@ -6,6 +6,10 @@ If you know of a good resource that you want to share, feel free to submit a pul
 
 This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJNaDIInpn7RCuigNL5NeBVkTFJxFtj8CkTW2g/edit?usp=sharing) of resources. I'm slowly working on coverting that file! 
 
+# Contents 
+
+* [News](##News)
+
 ## News
 
 * [GovTech](http://www.govtech.com/) - articles about technology in government
