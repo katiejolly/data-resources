@@ -396,6 +396,66 @@ hour(time) + minute(time)/60
 
 ### Conditionals
 
+In R, you can write an if/else statement, similar to the way you would write it in Python. It helps me to think about it this way because I started programming in Python first.
+
+It would look something like this:
+
+```{r}
+if (condition) {
+  do something
+ } else if (condition) {
+  do something
+ } else {
+  do something
+ }
+```
+But let's say you want to define a variable in a dataframe based on a conditional. It is way easier with tidyverse packages!
+
+You can use `mutate()` with `ifelse(condition, if-do, else-do)`
+
+For example, let's say you want to assign high & low with a conditional based on some values. You could do:
+
+```{r}
+library(dplyr)
+
+df %>%
+  mutate(x = ifelse(var > 5, "high", "low"))
+  
+# this assigns "high" to anything strictly higher than 5
+```
+You can also use a nested `ifelse()` for more complicated conditionals, although that is discouraged. More on that in a bit...
+
+In this example, I wanted the final variable to say "White subjects", "Nonwhite subjects", or "Unknown". I started with two different variables. One said whether or not race was known, and the other gave race, if known. 
+
+```{r}
+library(tidyverse)
+
+biopics <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/biopics/biopics.csv")
+
+biopics <- biopics %>% # start with our original data
+  mutate(race_plotting = ifelse(race_known == "Unknown", "Unknown", ifelse(subject_race == "White", "White subjects", "Nonwhite subjects"))) # this says, if race_known is unknown, stop there and just mark unknown. But if we know the race, check to see if the race is coded as white. If it is, mark white and stop there. If not, mark nonwhite. 
+```
+
+Instead of getting lost in nested statements, try this instead! Found in [Github](https://github.com/tidyverse/dplyr/issues/1518)
+
+```{r}
+df <- mutate(df, newvar = derivedFactor(
+  "group1" = oldvar %in% c("a", "b", "c"),
+  "group2" = oldvar %in% c("d", "e", "f"),
+  "group3" = oldvar %in% c("g", "h", "i"),
+  .default = NA
+))
+```
+
+`case_when()` is another good alternative that draws on some SQL syntax. Here's an example from [Stack Overflow](https://stackoverflow.com/questions/38649533/case-when-in-mutate-pipe)
+
+```{r}
+library(dplyr) # >= 0.7.0
+mtcars %>% 
+  mutate(cg = case_when(carb <= 2 ~ "low",
+                        carb > 2  ~ "high"))
+```
+
 ### ggplot2
 
 [ggplot2 gallery](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html) 
