@@ -12,10 +12,17 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Fivethirtyeight](http://fivethirtyeight.com/)
 * [Upshot](https://www.nytimes.com/section/upshot) - NYT's data analysis 
 * [Flowing Data](http://flowingdata.com/) - beautiful data visualization, both articles and tutorials 
+* [HuffPost Data](http://data.huffingtonpost.com/)
+* [WaPo Wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.0c876ed1d11b)
+* [Brookings](https://www.brookings.edu/)
+* [Urban Institute data/viz](https://www.urban.org/data-viz)
+* [NPR Political data and technology](https://www.npr.org/sections/political-data-technology)
+* [LA Times data desk](http://www.latimes.com/local/datadesk/#nt=taxonomy-article)
+* [The Guardian datablog](https://www.theguardian.com/data)
+
 
 ## GIS and online mapping
 
-* [Tableau public](https://public.tableau.com/s/) - Tableau desktop is **free** with a student email address! woohoo! 
 * [Carto](https://carto.com/)
 * [Mapbox](https://www.mapbox.com/)
 * [Modest maps](http://modestmaps.com/)
@@ -24,6 +31,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 
 ## Data visualization (mostly point-and-click)
 
+* [Tableau public](https://public.tableau.com/s/) - Tableau desktop is **free** with a student email address! woohoo! 
 * [Gephi](https://gephi.org/)
 * [UMD treemap](http://www.cs.umd.edu/hcil/treemap/)
 * [Chart.js](https://github.com/chartjs)
@@ -252,6 +260,109 @@ x$name <- factor(x$name, levels = x$name[order(x$val)])
 ggplot(x, aes(x = name, y = val)) + theme_bw() + geom_bar(stat = "identity")
 ```
 
+### GIS in R
+
+[GIS in R](http://www.nickeubank.com/gis-in-r/) by Nick Eubank. 
+
+[Robin Lovelace: Creating maps in R](https://github.com/Robinlovelace/Creating-maps-in-R)
+
+[R Spatial](http://rspatial.org/index.html)
+
+For geocoding, try [opencage](https://ropensci.org/tutorials/opencage_tutorial/) per Maelle's suggestion! 
+
+```{r}
+# forward geocoding
+
+output <- opencage_forward(placename = "Sarzeau")
+
+# reverse geocoding
+
+output2 <- opencage_reverse(latitude = 51.5034070,
+                            longitude = -0.1275920)
+                            
+# adding parameters
+
+results3 <- opencage_forward(placename = "Berlin", country = "DE")
+```
+
+But for now, I'm using a function I found online. Example:
+
+I wanted to geocode the locations of the Boston community centers recently. I found the names [here](https://www.boston.gov/community-centers). Using the chrome extension for [CSS selector gadget](http://selectorgadget.com/), I scraped the names into R.
+
+```{r}
+community_centers_url <- read_html("https://www.boston.gov/community-centers") # site with names
+
+centers <- community_centers_url %>%
+  html_nodes(".cd-t") %>% # css selector
+  html_text() # I want the text
+```
+
+Then I used a combination of functions to geocode. 
+
+```{r}
+url <- function(address, return.call = "json", sensor = "false") {
+ root <- "http://maps.google.com/maps/api/geocode/"
+ u <- paste(root, return.call, "?address=", address, "&sensor=", sensor, sep = "")
+ return(URLencode(u))
+} # calling google maps API
+ 
+geoCode <- function(address,verbose=FALSE) {
+ if(verbose) cat(address,"\n")
+ u <- url(address)
+ doc <- getURL(u)
+ x <- fromJSON(doc,simplify = FALSE)
+ if(x$status=="OK") {
+ lat <- x$results[[1]]$geometry$location$lat
+ lng <- x$results[[1]]$geometry$location$lng
+ location_type <- x$results[[1]]$geometry$location_type
+ formatted_address <- x$results[[1]]$formatted_address
+ return(c(lat, lng, location_type, formatted_address))
+ } else {
+ return(c(NA,NA,NA, NA))
+ } 
+} # actually getting the addresses
+```
+
+I'm sure there's a cleaner way to do this, I'll work on using opencage and then updating this page!
+
+
+#### Census data! I love census data!
+
+[Tidycensus](https://github.com/walkerke/tidycensus) for demographic data. 
+
+```{r}
+# median income in Boston census tracts
+
+bos_inc <- get_acs(geography = "tract", 
+              variables = c(medincome = "B19013_001"), 
+              state = "MA",
+              county = "Suffolk")
+
+# see available variables for 2016 acs 5-year
+
+load_variables(year = 2016, dataset = "acs5")
+```
+
+[Tigris](https://github.com/walkerke/tigris) to load the shapefiles to map census data!
+
+```{r}
+options(tigris_use_cache = TRUE) # doesn't cache by default
+bos_tract <- tracts(state = "MA", county = "Suffolk")
+```
+
+You can join the two with `tigris::geo_join`. Regular joins don't work with spatial data. 
+
+```{r}
+bos_joined <- geo_join(bos_tract, bos_inc, by = "GEOID")
+```
+
+And if I want to exclude a particular tract (it's mostly water, NA for all demographics) and makes my maps looks ugly :(
+
+```{r}
+bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County, Massachusetts")
+```
+
+`dplyr::filter` doesn't work with spatial data!! 
 ---
 
 * Python
