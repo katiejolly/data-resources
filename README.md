@@ -482,6 +482,111 @@ bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County
 
 `dplyr::filter` doesn't work with spatial data!! 
 
+### Cleaning data
+
+Principles of tidy data:
+
+* Each row is an observation, each column in an attribute/variable
+* Exactly one type of observational unit per table
+* Column headers should be variable names, not values (ie eye color vs blue)
+
+The `tidyverse` has understandable and compatible functions for dealing with data cleaning!
+
+Sometimes you have a table that is "wide" or "narrow," and you want it to be the other way. Use spread and gather!
+
+From the [RStudio blog](https://blog.rstudio.com/2014/07/22/introducing-tidyr/):
+
+```{r
+library(tidyr)
+library(dplyr)
+
+messy <- data.frame(
+  name = c("Wilbur", "Petunia", "Gregory"),
+  a = c(67, 80, 64),
+  b = c(56, 90, 50)
+)
+messy
+#>      name  a  b
+#> 1  Wilbur 67 56
+#> 2 Petunia 80 90
+#> 3 Gregory 64 50
+
+# We have three variables (name, drug and heartrate), but only name is currently in a column. We use gather() to gather the a and b columns into key-value pairs of drug and heartrate:
+
+# gather(data, key, value, ..., na.rm = FALSE, convert = FALSE,
+  factor_key = FALSE)
+
+messy %>%
+  gather(drug, heartrate, a:b)
+#>      name drug heartrate
+#> 1  Wilbur    a        67
+#> 2 Petunia    a        80
+#> 3 Gregory    a        64
+#> 4  Wilbur    b        56
+#> 5 Petunia    b        90
+#> 6 Gregory    b        50
+```
+
+Conversely, you also might want to `spread` your data.
+
+```{r}
+spread(data, key, value, fill = NA, convert = FALSE, drop = TRUE,
+  sep = NULL)
+```
+
+Let's say you have a variable for date-time, but you want one variable for date and the other for time. 
+
+In the case of the vignette, they wanted to separate location and time (randomized variables) in the table.
+
+```{r}
+tidier <- messy %>%
+  gather(key, time, -id, -trt)
+tidier %>% head(8)
+#>   id       trt     key    time
+#> 1  1 treatment work.T1 0.08514
+#> 2  2   control work.T1 0.22544
+#> 3  3 treatment work.T1 0.27453
+#> 4  4   control work.T1 0.27231
+#> 5  1 treatment home.T1 0.61583
+#> 6  2   control home.T1 0.42967
+#> 7  3 treatment home.T1 0.65166
+#> 8  4   control home.T1 0.56774
+
+tidy <- tidier %>%
+  separate(key, into = c("location", "time"), sep = "\\.")
+tidy %>% head(8)
+#>   id       trt location time    time
+#> 1  1 treatment     work   T1 0.08514
+#> 2  2   control     work   T1 0.22544
+#> 3  3 treatment     work   T1 0.27453
+#> 4  4   control     work   T1 0.27231
+#> 5  1 treatment     home   T1 0.61583
+#> 6  2   control     home   T1 0.42967
+#> 7  3 treatment     home   T1 0.65166
+#> 8  4   control     home   T1 0.56774
+```
+The opposite of `separate()` is `unite()`. 
+
+Let's say I have a dataframe where one of the variables is a full address. I want only the rows from Minnesota. 
+
+Found in a [SO question](https://stackoverflow.com/questions/13043928/selecting-rows-where-a-column-has-a-string-like-hsa-partial-string-match)
+
+```{r}
+df %>%
+    filter(str_detect(address, "Minnesota"))
+    
+# "detects" the string "Minnesota" in the address column    
+```
+
+What if we have NA values and blank cells, both meant to be NA?
+
+Answer found in a [SO question](https://stackoverflow.com/questions/9126840/delete-rows-with-blank-values-in-one-particular-column)
+
+```{r}
+df <- df[!(is.na(df$var) | df$var==""), ]
+```
+
+
 ## Data
 
 ### Gov open data
