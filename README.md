@@ -86,6 +86,7 @@ I'm slowly working on coverting the original doc!
 * [Cool infographics](https://www.amazon.com/Cool-Infographics-Effective-Communication-Visualization/dp/1118582306) by Randy Krum
 * [TED talk: The beauty of data visualization](https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization?language=en) by David McCandless
 * [The functional art](http://www.thefunctionalart.com/p/about-book.html) by Alberto Cairo
+* [Post: Visualizing incomplete and missing data](https://flowingdata.com/2018/01/30/visualizing-incomplete-and-missing-data/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_167) by Nathan Yau
 
 ## Rstats
 
@@ -121,6 +122,7 @@ I'm slowly working on coverting the original doc!
 * [Tidyverse packages](https://www.tidyverse.org/)
 * [Broom](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)- tidy model output
 * [Markovify](https://github.com/abresler/markovifyR)- use this for future Markov chain poems! Re: Malcolm's [tweet](https://twitter.com/malco_bearhat/status/956593858573316096)
+* ["Top 40" New Package Picks](https://rviews.rstudio.com/2018/01/25/dec-2017-new-package-picks/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_167)
 
 #### Blogs
 
