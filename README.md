@@ -64,6 +64,7 @@ This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJ
 * [Modest maps](http://modestmaps.com/)
 * [Leaflet JS](http://leafletjs.com/)
 * [Stamen](https://stamen.com/maps/)
+* [ColorBrewer: color advice for maps](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 
 ## Data visualization (mostly point-and-click)
 
