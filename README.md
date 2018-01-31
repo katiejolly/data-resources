@@ -181,6 +181,26 @@ file.choose() # pulls up finder so you can point to your file
 download.file(url, dest_path) # makes downloading files reproducible
 ```
 
+#### JSON in R
+
+`jsonlite` is a good package to use!
+
+* `fromJSON()` takes in a JSON file (can be a URL) and returns an R list
+* `toJSON()` takes in a file and converts it to JSON
+
+Formatting JSON files:
+  * `minify()`
+    * `{"a":1,"b":2,"c":{"x":5,"y":6}}`
+  * `prettify()`, `pretty = TRUE` by default in `toJSON()`
+    * `{
+        "a": 1,
+        "b": 2,
+        "c": {
+          "x": 5,
+          "y": 6
+        }
+      }`
+
 #### Extracting data from PDFs
 
 ROpenSci has an awesome package to use tabula in R-- [tabulizer](https://github.com/ropensci/tabulizer)
@@ -708,9 +728,69 @@ Answer found in a [SO question](https://stackoverflow.com/questions/9126840/dele
 df <- df[!(is.na(df$var) | df$var==""), ]
 ```
 
+#### Janitor
+
+`janitor` is an awesome data cleaning package. As it says on the github site, it was built with beginners in mind, but can be useful for more experienced R users by making routing processes a little faster. I now routinely add `clean_names()` every time I load a csv.
+
+```{r}
+read_csv("data.csv") %>%
+  clean_names()
+```
+
+In fact, when I'm loading lots of csvs I'll often write my own function that does that automatically. Something like:
+
+```{r}
+clean_read <- function(data) {
+  x <- read_csv(data) %>%
+    clean_names()
+  return(x)
+}
+```
+
+If you're dealing with messy data, especially hard coded data, you might see a lot of duplicates. In that case `get_dupes()` from  `janitor` will be your new best friend!
+
 ### Modeling in R
 
+General format for linear models in R `lm(response ~ explanatory, data = data)`
+
+* Include all variables as explanatory variables `lm(response ~ ., data = data)`
+* Include all but one (of a few) variables as explanatory variables `lm(response ~ . -vars_to_exclude, data = data)`
+
+Linear model assumptions
+  * Errors are normally distributed
+  * Errors have mean zero
+  * Errors have constant variance
+   * Common fix for non constant variance is `log(response)`
+  * Error terms are independent
+
 David Robinson's `broom` package gives model output in a "tidy" format. 
+
+The `tidy()` function gives the typical model summary as a tidy data frame-- great for further analysis!
+
+```{r}
+> library(fivethirtyeight)
+> data("hate_crimes")
+> library(broom)
+> mod <- lm(hate_crimes_per_100k_splc ~ gini_index, data = hate_crimes)
+> tidy(mod)
+         term  estimate std.error statistic    p.value
+1 (Intercept) -1.527463 0.7833043 -1.950025 0.05741966
+2  gini_index  4.020510 1.7177215  2.340606 0.02374447
+```
+Then instead of having to look for the fitted values in the nested structure of `mod`, you can get them + more in a tidy data frame with `augment()`!
+
+```{r}
+> head(augment(mod))
+  .rownames hate_crimes_per_100k_splc gini_index   .fitted    .se.fit      .resid       .hat    .sigma      .cooksd .std.resid
+1         1                0.12583893      0.472 0.3702175 0.04512572 -0.24437860 0.03499099 0.2410643 0.0192795907 -1.0312203
+2         2                0.14374012      0.422 0.1691920 0.06752783 -0.02545191 0.07835622 0.2439314 0.0005134118 -0.1098987
+3         3                0.22531995      0.455 0.3018689 0.03520103 -0.07654890 0.02129211 0.2436851 0.0011190988 -0.3207498
+4         4                0.06906077      0.458 0.3139304 0.03543832 -0.24486962 0.02158013 0.2410927 0.0116131848 -1.0261863
+5         5                0.25580536      0.471 0.3661970 0.04407070 -0.11039166 0.03337397 0.2433762 0.0037397389 -0.4654371
+6         6                0.39052330      0.457 0.3099099 0.03527586  0.08061342 0.02138273 0.2436546 0.0012466081  0.3377963
+```
+
+Then you can easily add fitted values and residuals to plots that help assess model quality. Fewer steps is good!
 
 ## Data
 
