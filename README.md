@@ -37,7 +37,7 @@ I'm slowly working on coverting the original doc!
     * [Gov open data](#gov-open-data)
     * [Popular press data](#popular-press-data)
     * [Curated lists](#curated-lists)
-* [Civic tech projects](#civic-tech-projects-open-source-contributing-yay)
+* [Civic tech projects & Open source contributing](#civic-tech-projects-open-source-contributing-yay)
 * [General tips + tricks](#general-tips--tricks)
 
 ## News
@@ -829,6 +829,11 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 
 * [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding. 
 * [Mapping prejudice](https://www.mappingprejudice.org/get-involved/)- digitizing and mapping racial covenants in MPLS home deeds. No coding required!
+
+### Open source contributing
+
+* [Contributr](https://ropensci.shinyapps.io/contributr/)- A shiny app for finding beginner Github issues to contribute to. [Github link](https://github.com/LucyMcGowan/contributr)
+* Contributing code to the tidyverse, blog post by Jim Hester](https://www.tidyverse.org/articles/2017/08/contributing/)
 
 ## General tips + tricks
 
