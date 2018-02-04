@@ -37,7 +37,7 @@ I'm slowly working on coverting the original doc!
     * [Gov open data](#gov-open-data)
     * [Popular press data](#popular-press-data)
     * [Curated lists](#curated-lists)
-* [Civic tech projects & Open source contributing](#civic-tech-projects-open-source-contributing-yay)
+* [Civic tech projects & Open source contributing](#civic-tech-projects)
 * [General tips + tricks](#general-tips--tricks)
 
 ## News
@@ -825,7 +825,7 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 * [The Guardian: global development data](https://www.theguardian.com/global-development-professionals-network/2016/mar/16/the-top-10-sources-of-data-for-international-development-research)
 
 
-## Civic tech projects (open source contributing! yay!)
+## Civic tech projects
 
 * [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding. 
 * [Mapping prejudice](https://www.mappingprejudice.org/get-involved/)- digitizing and mapping racial covenants in MPLS home deeds. No coding required!
