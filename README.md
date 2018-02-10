@@ -160,7 +160,8 @@ I'm slowly working on coverting the original doc!
 * [Curated list of R books](https://github.com/RomanTsegelskyi/rbooks)
 * [Computational linear algebra course](http://www.fast.ai/2017/07/17/num-lin-alg/)
 * [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
-* [Geocomputation with R](https://geocompr.robinlovelace.net/)
+* [Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, Jannes Muenchow
+* [Introduction to Open Data Science](http://ohi-science.org/data-science-training/index.html) by The Ocean Health Index Team
 
 
 #### Style guides
