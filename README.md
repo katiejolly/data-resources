@@ -162,6 +162,7 @@ I'm slowly working on coverting the original doc!
 * [The fundamentals of data visualization](http://serialmentor.com/blog/2018/1/23/fundamentals-of-data-visualization) by Claus Wilke
 * [Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, Jannes Muenchow
 * [Introduction to Open Data Science](http://ohi-science.org/data-science-training/index.html) by The Ocean Health Index Team
+* [Efficient R Programming](https://csgillespie.github.io/efficientR/) by Colin Gillespie, Robin Lovelace
 
 
 #### Style guides
@@ -418,6 +419,19 @@ time <- hm("8:30")
 hour(time) + minute(time)/60
 #> 8.5
 ```
+
+### Working with nested lists
+
+`str()` is a helpful starter function for working with nested lists, but we can certainly improve upon it. First, using the `max.level` argument specifies how much information you want about the list. For example, the output from `str(..., max.level=0)` is something along the lines of `List of x`, replace x with the length of your list. 
+
+A more interactive way to work with nested lists is with {listviewer}, a package that lets you easily explore your list. 
+
+```{r}
+library(listviewer)
+jsonedit(df, mode = "view")
+```
+
+The options for the `mode` argument are code, form, text, tree, and view. Even though you specify the mode, you can easily switch within the interactive list view if you think something else would work better for your particular use. 
 
 ### Dataframes/tables
 
