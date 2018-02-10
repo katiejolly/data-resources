@@ -503,6 +503,8 @@ ggplot(x, aes(x = name, y = val)) + theme_bw() + geom_bar(stat = "identity")
 
 To look into: [gghighlight](https://yutani.rbind.io/post/2017-10-06-gghighlight/?utm_content=buffer25e45&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) in this blog post! Looks like an easier way to highlight certain lines/bars instead of manually coding that. 
 
+Cookbook of good `ggplot2` hacks [here](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/)!!
+
 ### GIS in R
 
 [GIS in R](http://www.nickeubank.com/gis-in-r/) by Nick Eubank. 
