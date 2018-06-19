@@ -123,6 +123,7 @@ I'm slowly working on coverting the original doc!
 * [Broom](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)- tidy model output
 * [Markovify](https://github.com/abresler/markovifyR)- use this for future Markov chain poems! Re: Malcolm's [tweet](https://twitter.com/malco_bearhat/status/956593858573316096)
 * ["Top 40" New Package Picks](https://rviews.rstudio.com/2018/01/25/dec-2017-new-package-picks/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_167)
+* [Write your own packages!](#https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
 
 #### Blogs
 
