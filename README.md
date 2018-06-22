@@ -166,6 +166,7 @@ I'm slowly working on coverting the original doc!
 * [Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, Jannes Muenchow
 * [Introduction to Open Data Science](http://ohi-science.org/data-science-training/index.html) by The Ocean Health Index Team
 * [Efficient R Programming](https://csgillespie.github.io/efficientR/) by Colin Gillespie, Robin Lovelace
+* [Forecasting: Principles and Practice](https://otexts.org/fpp2/) by Rob J. Hyndman, George Athanasopoulos
 
 
 #### Style guides
