@@ -1,14 +1,14 @@
 # Data resources
 
-### A list of helpful links and code for R, SQL, Python, HTML/CSS, etc. 
+## A list of helpful links and code for R, SQL, Python, HTML/CSS, etc
 
-If you know of a good resource that you want to share, feel free to submit a pull request! If you're not sure how to do that, you can also submit an issue with the link to the resource and a quick intro to why it's helpful for you. 
+If you know of a good resource that you want to share, feel free to submit a pull request! If you're not sure how to do that, you can also submit an issue with the link to the resource and a quick intro to why it's helpful for you.
 
 This doc is based on my [google doc](https://docs.google.com/document/d/1dN9eeNJNaDIInpn7RCuigNL5NeBVkTFJxFtj8CkTW2g/edit?usp=sharing) of resources and inspired by a coversation I had on [twitter](https://twitter.com/katiejolly6/status/957641676130082817).
 
-I'm slowly working on coverting the original doc! 
+I'm slowly working on coverting the original doc!
 
-# Contents 
+## Contents
 
 * [News](#news)
 * [GIS and online mapping](#gis-and-online-mapping)
@@ -22,7 +22,7 @@ I'm slowly working on coverting the original doc!
       * Blogs
       * Books
       * Style guides
-    * [Helpful file functions](#helpful-file-functions) 
+    * [Helpful file functions](#helpful-file-functions)
       * Extracting data from PDFs
     * [Excel in R](#excel-in-r)
     * [Googlesheets](#googlesheets-package-3)
@@ -44,8 +44,8 @@ I'm slowly working on coverting the original doc!
 
 * [GovTech](http://www.govtech.com/) - articles about technology in government
 * [Fivethirtyeight](http://fivethirtyeight.com/)
-* [Upshot](https://www.nytimes.com/section/upshot) - NYT's data analysis 
-* [Flowing Data](http://flowingdata.com/) - beautiful data visualization, both articles and tutorials 
+* [Upshot](https://www.nytimes.com/section/upshot) - NYT's data analysis
+* [Flowing Data](http://flowingdata.com/) - beautiful data visualization, both articles and tutorials
 * [HuffPost Data](http://data.huffingtonpost.com/)
 * [WaPo Wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.0c876ed1d11b)
 * [Brookings](https://www.brookings.edu/)
@@ -58,7 +58,6 @@ I'm slowly working on coverting the original doc!
 * [Smart Cities DIVE](https://www.smartcitiesdive.com/)
 * [Pudding](https://pudding.cool/)
 
-
 ## GIS and online mapping
 
 * [Carto](https://carto.com/)
@@ -66,18 +65,17 @@ I'm slowly working on coverting the original doc!
 * [Modest maps](http://modestmaps.com/)
 * [Leaflet JS](http://leafletjs.com/)
 * [Stamen](https://stamen.com/maps/)
-* [ColorBrewer: color advice for maps](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 
 ## Data visualization (mostly point-and-click)
 
-* [Tableau public](https://public.tableau.com/s/) - Tableau desktop is **free** with a student email address! woohoo! 
+* [Tableau public](https://public.tableau.com/s/) - Tableau desktop is **free** with a student email address! woohoo!
 * [Gephi](https://gephi.org/)
 * [UMD treemap](http://www.cs.umd.edu/hcil/treemap/)
 * [Chart.js](https://github.com/chartjs)
 * [Raw graphs](http://rawgraphs.io/)
 * [Timeline](https://timeline.knightlab.com/)
 
-### General data viz books, etc. 
+### General data viz books, etc
 
 * [Data points: visualization that means something](http://flowingdata.com/data-points/) by Nathan Yau
 * [Visualize this](http://book.flowingdata.com/) by Nathan Yau
@@ -88,11 +86,51 @@ I'm slowly working on coverting the original doc!
 * [The functional art](http://www.thefunctionalart.com/p/about-book.html) by Alberto Cairo
 * [Post: Visualizing incomplete and missing data](https://flowingdata.com/2018/01/30/visualizing-incomplete-and-missing-data/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_167) by Nathan Yau
 
+### Color specific resources
+
+#### Literature
+
+* ["How To Use Color To Prove Your Point, From A Data Viz Expert" by Meg Miller](https://www.fastcompany.com/3062182/how-to-use-color-to-prove-your-point-from-a-data-viz-expert)
+* ["When communicating with color, balance can be a path to accuracy" by Chir Barncard](https://news.wisc.edu/when-communicating-with-color-balance-can-be-a-path-to-accuracy/)
+* [XKCD Color Survey Results](https://blog.xkcd.com/2010/05/03/color-survey-results/)
+* ["A Simple Web Developer's Color Guide" by Laura Elizabth](https://www.smashingmagazine.com/2016/04/web-developer-guide-color/#top)
+* ["Your Friendly Guide to Colors in Data Visualisation" by Lisa Charlotte Rost](https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/)
+* ["Visual Reasoning Visual Reasoning Lab at the University of Wisconsin – Madison" by Karen Schloss](https://schlosslab.discovery.wisc.edu/). [Related Data Stories podcast](datastori.es/119-color-with-karen-schloss/)
+* ["Viz Palette for Data Visualization Color" by Elijah Meeks](https://towardsdatascience.com/viz-palette-for-data-visualization-color-8e678d996077)
+* ["Interaction of Color" by Josef Albers (print and Apple app)](http://yupnet.org/interactionofcolor/)
+* ["How To Avoid Equidistant HSV Colors" by Gregor Aisch](https://www.vis4.net/blog/2011/12/avoid-equidistant-hsv-colors/)
+* ["On rainbows" by Charlie Lloyd](http://basecase.org/env/on-rainbows)
+
+#### Interactive Color Tools
+
+* [Colorpicker for Data](http://tristen.ca/hcl-picker/#/hlc/6/1/15534C/E2E062)
+* [Chroma.js](http://gka.github.io/palettes/#diverging|c0=darkred,deeppink,lightyellow|c1=lightyellow,lightgreen,teal|steps=13|bez0=1|bez1=1|coL0=1|coL1=1)
+* [ColorBrewer: color advice for maps](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+* [Viz Palette](http://projects.susielu.com/viz-palette)
+* [Colorgorical](http://vrl.cs.brown.edu/color)
+* [Adobe color wheel](https://color.adobe.com/create/color-wheel/)
+
+#### Design Inspiration
+
+* [Design Seeds: for all who color](https://www.design-seeds.com/)
+* [Designspiration](https://www.designspiration.net/)
+
+## Inclusive Design
+
+There is no use having a visualization if folks can't read it.
+
+* ["Accessible Colors for Data Visualization" by Zach Grosser](https://medium.com/square-corner-blog/accessible-colors-for-data-visualization-2ad64ac4ee7e)
+* [Design.blog post on inclusive design](https://design.blog/inclusive/)
+* [How to Meet WCAG (Web Content Accessability Guidelines): quick reference)](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#visual-audio-contrast)
+* [WebAIM (we accessibility in mind)](https://webaim.org/)
+* [Super list of color contrast tools](http://www.webaxe.org/color-contrast-tools/)
+* Many of the color tools above have specific filters and toolsets for making your web and print content
+
 ## Rstats
 
 ### Links
 
-* [awesome-R](https://github.com/qinwf/awesome-R) - github repo with SO MANY good R resources! Mostly packages, some other things at the end. 
+* [awesome-R](https://github.com/qinwf/awesome-R) - github repo with SO MANY good R resources! Mostly packages, some other things at the end.
 * [RStudio online learning](https://www.rstudio.com/online-learning/)
 
 #### Mentorship
@@ -108,7 +146,6 @@ I'm slowly working on coverting the original doc!
 * [Linear digressions](http://lineardigressions.com/)
 * [Data Stories](http://datastori.es/)
 
-
 #### Interviews
 
 * [.Rprofile Mara Averick](https://ropensci.org/blog/2017/11/10/rprofile-mara-averick/)
@@ -118,12 +155,13 @@ I'm slowly working on coverting the original doc!
 #### Packages to know/learn
 
 * [ROpenSci packages](https://ropensci.org/packages/)
-* [Emo: emojis in R](https://github.com/hadley/emo) because why not? 
+* [Emo: emojis in R](https://github.com/hadley/emo) because why not?
 * [Tidyverse packages](https://www.tidyverse.org/)
 * [Broom](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)- tidy model output
 * [Markovify](https://github.com/abresler/markovifyR)- use this for future Markov chain poems! Re: Malcolm's [tweet](https://twitter.com/malco_bearhat/status/956593858573316096)
 * ["Top 40" New Package Picks](https://rviews.rstudio.com/2018/01/25/dec-2017-new-package-picks/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_167)
 * [Write your own packages!](#https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
+* [forecast](http://pkg.robjhyndman.com/forecast/) and [forecastHybrid](https://cran.r-project.org/web/packages/forecastHybrid/vignettes/forecastHybrid.html)
 
 #### Blogs
 
@@ -143,6 +181,7 @@ I'm slowly working on coverting the original doc!
 * [Caitlin Hudon](https://caitlinhudon.com/)
 * [Julia Silge](https://juliasilge.com/blog/)
 * [Thomas Lin Pedersen](https://www.data-imaginist.com/)
+* [Robert J Hyndman](https://robjhyndman.com/)
 
 #### Books
 
@@ -164,7 +203,7 @@ I'm slowly working on coverting the original doc!
 * [Geocomputation with R](https://geocompr.robinlovelace.net/) by Robin Lovelace, Jakub Nowosad, Jannes Muenchow
 * [Introduction to Open Data Science](http://ohi-science.org/data-science-training/index.html) by The Ocean Health Index Team
 * [Efficient R Programming](https://csgillespie.github.io/efficientR/) by Colin Gillespie, Robin Lovelace
-
+* [Forecasting: Principles and Practice](https://otexts.org/fpp2/) by Rob J. Hyndman, George Athanasopoulos
 
 #### Style guides
 
@@ -192,10 +231,11 @@ download.file(url, dest_path) # makes downloading files reproducible
 * `toJSON()` takes in a file and converts it to JSON
 
 Formatting JSON files:
-  * `minify()`
-    * `{"a":1,"b":2,"c":{"x":5,"y":6}}`
-  * `prettify()`, `pretty = TRUE` by default in `toJSON()`
-    * `{
+
+* `minify()`
+  * `{"a":1,"b":2,"c":{"x":5,"y":6}}`
+* `prettify()`, `pretty = TRUE` by default in `toJSON()`
+  * `{
         "a": 1,
         "b": 2,
         "c": {
@@ -208,7 +248,7 @@ Formatting JSON files:
 
 ROpenSci has an awesome package to use tabula in R-- [tabulizer](https://github.com/ropensci/tabulizer)
 
-[Tabula](http://tabula.technology/) is also awesome on its own. 
+[Tabula](http://tabula.technology/) is also awesome on its own.
 
 ```{r}
 # example code from github
@@ -219,7 +259,7 @@ out1 <- extract_tables(f)
 
 out2 <- extract_tables(f, pages = 1, guess = FALSE, method = "data.frame")
 
-extract_areas() # turns the pdf into an R graphic so you can select the tables on a page, if the whole page isn't a table! 
+extract_areas() # turns the pdf into an R graphic so you can select the tables on a page, if the whole page isn't a table!
 
 out3 <- extract_text(f, page = 3) # gets just the text from the table, without turning it into a dataframe
 cat(out3, sep = "\n")
@@ -244,7 +284,7 @@ cat(out3, sep = "\n")
 
 How to install tabulizer:
 
-(On Windows) 
+(On Windows)
 
 From github vignette:
 
@@ -254,7 +294,7 @@ In command prompt, install Chocolately if you don't already have it:
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 ```
 
-Then install java! 
+Then install java!
 
 ```
 choco install jdk7 -y
@@ -266,9 +306,9 @@ To set an environment variable in R use
 Sys.setenv(JAVA_HOME = "C:/Program Files/Java/jdk1.8.0_92")
 ```
 
-if that doesn't work, look at the other options in the vignette. 
+if that doesn't work, look at the other options in the vignette.
 
-Then install the dev version of the package (not yet on CRAN) 
+Then install the dev version of the package (not yet on CRAN)
 
 ```{r}
 if (!require("ghit")) {
@@ -302,25 +342,24 @@ my_workbook <- lapply(excel_sheets("data.xlsx"),
   path = "data.xlsx")
 ```
 
-[XLConnect](https://www.rdocumentation.org/packages/XLConnect/versions/0.2-13) - dynamic connection between R and excel. 
+[XLConnect](https://www.rdocumentation.org/packages/XLConnect/versions/0.2-13) - dynamic connection between R and excel.
 
 ```{r}
 createSheet(book, “name”)
 loadWorkbook(“path”)
 getSheets(book)
-writeWorksheet () # function (object, data, sheet, startRow = 1, startCol = 1, header = TRUE, 
-    rownames = NULL) 
+writeWorksheet () # function (object, data, sheet, startRow = 1, startCol = 1, header = TRUE,
+    rownames = NULL)
 writeWorkbook(object, “path”)
-renameSheet() # function (object, sheet, newName) 
-removeSheet() # function (object, sheet) 
+renameSheet() # function (object, sheet, newName)
+removeSheet() # function (object, sheet)
 ```
-
 
 ### Googlesheets package <3
 
 [googlesheets](https://github.com/jennybc/googlesheets)
 
-There's a [vignette](https://rawgit.com/jennybc/googlesheets/master/vignettes/basic-usage.html) with lots of good info. 
+There's a [vignette](https://rawgit.com/jennybc/googlesheets/master/vignettes/basic-usage.html) with lots of good info.
 
 ```{r}
 # uses oauth to access drive
@@ -336,7 +375,7 @@ gs_title() # register a sheet by title
 gs_key() # register a sheet by key
 gs_url() # register a sheet by url
 
-... tbd 
+... tbd
 ```
 
 ### Dates and times
@@ -346,6 +385,7 @@ gs_url() # register a sheet by url
 ```{r}
 strptime(x, format, tz = "")
 ```
+
 Formatting POSIXct objects:
 
 * %Y: 4-digit year (1982)
@@ -363,7 +403,7 @@ Formatting POSIXct objects:
 * %T: shorthand notation for the typical format %H:%M:%S
 * %p: AM/PM indicator
 
-Example use: 
+Example use:
 
 ```{r}
 # from r documentation
@@ -375,7 +415,7 @@ Also use `lubridate` for working with date objects!
 
 There's helpful info on the [tidyverse site](http://lubridate.tidyverse.org/) as well as a nice [vignette](https://cran.r-project.org/web/packages/lubridate/lubridate.pdf)
 
-Lubridate makes it easy to manipulate and work with dates. 
+Lubridate makes it easy to manipulate and work with dates.
 
 It has some of the same capacity as `strptime`, although I actually prefer the former.
 
@@ -385,6 +425,7 @@ ymd(20101215)
 mdy("4/1/17")
 #> [1] "2017-04-01"
 ```
+
 Lubridate also makes timezones less confusing!
 
 ```{r}
@@ -423,16 +464,16 @@ hour(time) + minute(time)/60
 
 ### Working with nested lists
 
-`str()` is a helpful starter function for working with nested lists, but we can certainly improve upon it. First, using the `max.level` argument specifies how much information you want about the list. For example, the output from `str(..., max.level=0)` is something along the lines of `List of x`, replace x with the length of your list. 
+`str()` is a helpful starter function for working with nested lists, but we can certainly improve upon it. First, using the `max.level` argument specifies how much information you want about the list. For example, the output from `str(..., max.level=0)` is something along the lines of `List of x`, replace x with the length of your list.
 
-A more interactive way to work with nested lists is with {listviewer}, a package that lets you easily explore your list. 
+A more interactive way to work with nested lists is with {listviewer}, a package that lets you easily explore your list.
 
 ```{r}
 library(listviewer)
 jsonedit(df, mode = "view")
 ```
 
-The options for the `mode` argument are code, form, text, tree, and view. Even though you specify the mode, you can easily switch within the interactive list view if you think something else would work better for your particular use. 
+The options for the `mode` argument are code, form, text, tree, and view. Even though you specify the mode, you can easily switch within the interactive list view if you think something else would work better for your particular use.
 
 ### Dataframes/tables
 
@@ -451,6 +492,7 @@ if (condition) {
   do something
  }
 ```
+
 But let's say you want to define a variable in a dataframe based on a conditional. It is way easier with tidyverse packages!
 
 You can use `mutate()` with `ifelse(condition, if-do, else-do)`
@@ -465,9 +507,10 @@ df %>%
   
 # this assigns "high" to anything strictly higher than 5
 ```
+
 You can also use a nested `ifelse()` for more complicated conditionals, although that is discouraged. More on that in a bit...
 
-In this example, I wanted the final variable to say "White subjects", "Nonwhite subjects", or "Unknown". I started with two different variables. One said whether or not race was known, and the other gave race, if known. 
+In this example, I wanted the final variable to say "White subjects", "Nonwhite subjects", or "Unknown". I started with two different variables. One said whether or not race was known, and the other gave race, if known.
 
 ```{r}
 library(tidyverse)
@@ -475,7 +518,7 @@ library(tidyverse)
 biopics <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/biopics/biopics.csv")
 
 biopics <- biopics %>% # start with our original data
-  mutate(race_plotting = ifelse(race_known == "Unknown", "Unknown", ifelse(subject_race == "White", "White subjects", "Nonwhite subjects"))) # this says, if race_known is unknown, stop there and just mark unknown. But if we know the race, check to see if the race is coded as white. If it is, mark white and stop there. If not, mark nonwhite. 
+  mutate(race_plotting = ifelse(race_known == "Unknown", "Unknown", ifelse(subject_race == "White", "White subjects", "Nonwhite subjects"))) # this says, if race_known is unknown, stop there and just mark unknown. But if we know the race, check to see if the race is coded as white. If it is, mark white and stop there. If not, mark nonwhite.
 ```
 
 Instead of getting lost in nested statements, try this instead! Found in [Github](https://github.com/tidyverse/dplyr/issues/1518)
@@ -493,14 +536,14 @@ df <- mutate(df, newvar = derivedFactor(
 
 ```{r}
 library(dplyr) # >= 0.7.0
-mtcars %>% 
+mtcars %>%
   mutate(cg = case_when(carb <= 2 ~ "low",
                         carb > 2  ~ "high"))
 ```
 
 ### ggplot2
 
-[ggplot2 gallery](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html) 
+[ggplot2 gallery](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
 How to change the order of the bars in `geom_bar()` !!!!
 
@@ -517,19 +560,16 @@ x$name <- factor(x$name, levels = x$name[order(x$val)])
 ggplot(x, aes(x = name, y = val)) + theme_bw() + geom_bar(stat = "identity")
 ```
 
-To look into: [gghighlight](https://yutani.rbind.io/post/2017-10-06-gghighlight/?utm_content=buffer25e45&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) in this blog post! Looks like an easier way to highlight certain lines/bars instead of manually coding that. 
+To look into: [gghighlight](https://yutani.rbind.io/post/2017-10-06-gghighlight/?utm_content=buffer25e45&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) in this blog post! Looks like an easier way to highlight certain lines/bars instead of manually coding that.
 
 Cookbook of good `ggplot2` hacks [here](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/)!!
 
 ### GIS in R
 
-[GIS in R](http://www.nickeubank.com/gis-in-r/) by Nick Eubank. 
-
-[Robin Lovelace: Creating maps in R](https://github.com/Robinlovelace/Creating-maps-in-R)
-
-[R Spatial](http://rspatial.org/index.html)
-
-For geocoding, try [opencage](https://ropensci.org/tutorials/opencage_tutorial/) per Maelle's suggestion! 
+* [GIS in R](http://www.nickeubank.com/gis-in-r/) by Nick Eubank.
+* [Robin Lovelace: Creating maps in R](https://github.com/Robinlovelace/Creating-maps-in-R)
+* [R Spatial](http://rspatial.org/index.html)
+* For geocoding, try [opencage](https://ropensci.org/tutorials/opencage_tutorial/) per Maelle's suggestion!
 
 ```{r}
 # forward geocoding
@@ -540,7 +580,7 @@ output <- opencage_forward(placename = "Sarzeau")
 
 output2 <- opencage_reverse(latitude = 51.5034070,
                             longitude = -0.1275920)
-                            
+
 # adding parameters
 
 results3 <- opencage_forward(placename = "Berlin", country = "DE")
@@ -558,7 +598,7 @@ centers <- community_centers_url %>%
   html_text() # I want the text
 ```
 
-Then I used a combination of functions to geocode. 
+Then I used a combination of functions to geocode.
 
 ```{r}
 url <- function(address, return.call = "json", sensor = "false") {
@@ -566,7 +606,7 @@ url <- function(address, return.call = "json", sensor = "false") {
  u <- paste(root, return.call, "?address=", address, "&sensor=", sensor, sep = "")
  return(URLencode(u))
 } # calling google maps API
- 
+
 geoCode <- function(address,verbose=FALSE) {
  if(verbose) cat(address,"\n")
  u <- url(address)
@@ -580,7 +620,7 @@ geoCode <- function(address,verbose=FALSE) {
  return(c(lat, lng, location_type, formatted_address))
  } else {
  return(c(NA,NA,NA, NA))
- } 
+ }
 } # actually getting the addresses
 ```
 
@@ -603,16 +643,15 @@ for(i in 1:nrow(turnout_data)){
 
 ```
 
+#### Census data! I love census data
 
-#### Census data! I love census data!
-
-[Tidycensus](https://github.com/walkerke/tidycensus) for demographic data. 
+[Tidycensus](https://github.com/walkerke/tidycensus) for demographic data.
 
 ```{r}
 # median income in Boston census tracts
 
-bos_inc <- get_acs(geography = "tract", 
-              variables = c(medincome = "B19013_001"), 
+bos_inc <- get_acs(geography = "tract",
+              variables = c(medincome = "B19013_001"),
               state = "MA",
               county = "Suffolk")
 
@@ -628,7 +667,7 @@ options(tigris_use_cache = TRUE) # doesn't cache by default
 bos_tract <- tracts(state = "MA", county = "Suffolk")
 ```
 
-You can join the two with `tigris::geo_join`. Regular joins don't work with spatial data. 
+You can join the two with `tigris::geo_join`. Regular joins don't work with spatial data.
 
 ```{r}
 bos_joined <- geo_join(bos_tract, bos_inc, by = "GEOID")
@@ -640,7 +679,7 @@ And if I want to exclude a particular tract (it's mostly water, NA for all demog
 bos_joined <- subset(bos_joined, NAME.1 != "Census Tract 9901.01, Suffolk County, Massachusetts")
 ```
 
-`dplyr::filter` doesn't work with spatial data!! 
+`dplyr::filter` doesn't work with spatial data!!
 
 ### Cleaning data
 
@@ -694,7 +733,7 @@ spread(data, key, value, fill = NA, convert = FALSE, drop = TRUE,
   sep = NULL)
 ```
 
-Let's say you have a variable for date-time, but you want one variable for date and the other for time. 
+Let's say you have a variable for date-time, but you want one variable for date and the other for time.
 
 In the case of the vignette, they wanted to separate location and time (randomized variables) in the table.
 
@@ -725,17 +764,17 @@ tidy %>% head(8)
 #> 7  3 treatment     home   T1 0.65166
 #> 8  4   control     home   T1 0.56774
 ```
-The opposite of `separate()` is `unite()`. 
 
-Let's say I have a dataframe where one of the variables is a full address. I want only the rows from Minnesota. 
+The opposite of `separate()` is `unite()`.
+
+Let's say I have a dataframe where one of the variables is a full address. I want only the rows from Minnesota.
 
 Found in a [SO question](https://stackoverflow.com/questions/13043928/selecting-rows-where-a-column-has-a-string-like-hsa-partial-string-match)
 
 ```{r}
 df %>%
     filter(str_detect(address, "Minnesota"))
-    
-# "detects" the string "Minnesota" in the address column    
+# "detects" the string "Minnesota" in the address column
 ```
 
 What if we have NA values and blank cells, both meant to be NA?
@@ -775,13 +814,14 @@ General format for linear models in R `lm(response ~ explanatory, data = data)`
 * Include all but one (of a few) variables as explanatory variables `lm(response ~ . -vars_to_exclude, data = data)`
 
 Linear model assumptions
-  * Errors are normally distributed
-  * Errors have mean zero
-  * Errors have constant variance
-   * Common fix for non constant variance is `log(response)`
-  * Error terms are independent
 
-David Robinson's `broom` package gives model output in a "tidy" format. 
+* Errors are normally distributed
+* Errors have mean zero
+  * Errors have constant variance
+  * Common fix for non constant variance is `log(response)`
+* Error terms are independent
+
+David Robinson's `broom` package gives model output in a "tidy" format.
 
 The `tidy()` function gives the typical model summary as a tidy data frame-- great for further analysis!
 
@@ -795,6 +835,7 @@ The `tidy()` function gives the typical model summary as a tidy data frame-- gre
 1 (Intercept) -1.527463 0.7833043 -1.950025 0.05741966
 2  gini_index  4.020510 1.7177215  2.340606 0.02374447
 ```
+
 Then instead of having to look for the fitted values in the nested structure of `mod`, you can get them + more in a tidy data frame with `augment()`!
 
 ```{r}
@@ -812,7 +853,8 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 
 ## Data
 
-### General Repositories:
+### General Repositories
+
 * [Kaggle Datasets](https://www.kaggle.com/datasets)
 * [data.world](https://data.world/)
 
@@ -828,7 +870,7 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 * [Boston Open Data](https://data.boston.gov/)
 * [World Bank databank](http://databank.worldbank.org/data/home.aspx)
 
-### Popular press data 
+### Popular press data
 
 * [Fivethirthyeight](https://github.com/fivethirtyeight/data/tree/master/biopics)
 * [Buzzfeed](https://github.com/BuzzFeedNews)
@@ -842,16 +884,15 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 * [Public APIs](https://github.com/toddmotto/public-apis)
 * [The Guardian: global development data](https://www.theguardian.com/global-development-professionals-network/2016/mar/16/the-top-10-sources-of-data-for-international-development-research)
 
-
 ## Civic tech projects
 
-* [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding. 
+* [Open elections](https://github.com/openelections/openelections-core)- creating a central database of US election data at the precinct level. Uses Python + roles for non-coding.
 * [Mapping prejudice](https://www.mappingprejudice.org/get-involved/)- digitizing and mapping racial covenants in MPLS home deeds. No coding required!
 
 ### Open source contributing
 
 * [Contributr](https://ropensci.shinyapps.io/contributr/)- A shiny app for finding beginner Github issues to contribute to. [Github link](https://github.com/LucyMcGowan/contributr)
-* Contributing code to the tidyverse, blog post by Jim Hester](https://www.tidyverse.org/articles/2017/08/contributing/)
+* [Contributing code to the tidyverse, blog post by Jim Hester](https://www.tidyverse.org/articles/2017/08/contributing/)
 
 ## General tips + tricks
 
@@ -872,5 +913,3 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 * SQL
 
 * Jekyll + blogging
-
-
