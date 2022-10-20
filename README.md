@@ -910,6 +910,6 @@ Then you can easily add fitted values and residuals to plots that help assess mo
 
 * Regex
 
-* SQL
+* [SQL](https://www.scaler.com/topics/sql/)
 
 * Jekyll + blogging
